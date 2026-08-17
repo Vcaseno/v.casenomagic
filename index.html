@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.caseno // The Grand Illusion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Soft, ambient magical synth background track placeholder -->
+    <audio id="bgMusic" loop src="https://soundhelix.com"></audio>
+
+    <div class="stage-container">
+        
+        <!-- PHASE 1: Grid Introduction -->
+        <div id="phase1" class="phase active">
+            <header class="main-header">
+                <h2>CHOOSE A CARD & CLEAR YOUR MIND</h2>
+                <p>Memorize one card from the matrix below. Do not touch it or click it.</p>
+            </header>
+            <div class="card-matrix-grid" id="deckGrid1"></div>
+            <div class="control-panel">
+                <button class="manga-btn" onclick="goToPhase2()">OK!</button>
+            </div>
+        </div>
+
+        <!-- PHASE 2: Manga Banner State -->
+        <div id="phase2" class="phase hidden">
+            <div class="manga-strip-container">
+                <div class="manga-banner-strip">
+                    <span class="manga-title-text">OK!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 3: Mathematical Filter Mix Sequence -->
+        <div id="phase3" class="phase hidden">
+            <header class="main-header">
+                <h2>THE ANALYSIS GRID</h2>
+                <p id="instructionText">Which vertical column contains your memorized card?</p>
+            </header>
+            <div class="matrix-columns-container" id="matrixContainer"></div>
+        </div>
+
+        <!-- PHASE 4: The 5-Minute Shuffling Ritual Matrix -->
+        <div id="phase4" class="phase hidden">
+            <div class="ritual-chamber">
+                <div class="loading-ring"></div>
+                <div class="ritual-status">CALIBRATING SYSTEM DECRYPT_MATRIX...</div>
+                <p class="timer-log">Analyzing brainwave residue streams... Please wait.</p>
+            </div>
+        </div>
+
+        <!-- PHASE 5: Chibi Magic Routine & Exact Verification -->
+        <div id="phase5" class="phase hidden">
+            <!-- Hand-Crafted CSS Vector Anime Chibi Character Frame -->
+            <div class="anime-chibi-stage">
+                <div class="chibi-brand-tag">V.caseno</div>
+                <div class="vector-chibi-body">
+                    <div class="chibi-hair-back"></div>
+                    <div class="chibi-head">
+                        <div class="chibi-eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="chibi-blush"></div>
+                    </div>
+                    <div class="chibi-hoodie">
+                        <div class="hoodie-strings"></div>
+                    </div>
+                    <div class="chibi-hand-wand" id="magicWand">✨</div>
+                </div>
+                <div class="chibi-chat-bubble hidden" id="verificationBubble">Is this your card? ✅?</div>
+            </div>
+
+            <div class="center-reveal-box">
+                <div class="premium-holo-card hidden" id="predictedTargetCard">
+                    <div class="holo-glare-overlay"></div>
+                    <div class="inner-card-artwork" id="finalArtNode"></div>
+                </div>
+            </div>
+
+            <div class="completion-deck-control hidden" id="endActionPanel">
+                <button class="manga-btn finish" onclick="terminateShow()">END, THANK YOU</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+      </html>
+      
