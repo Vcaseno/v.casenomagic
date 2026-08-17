@@ -1,0 +1,279 @@
+body {
+    background: radial-gradient(circle at center, #ffffff 0%, #cbdff2 100%);
+    color: #233446;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.stage-container {
+    width: 95%;
+    max-width: 1100px;
+    position: relative;
+}
+
+.phase { transition: opacity 0.4s ease-in-out; }
+.hidden { display: none !important; opacity: 0; }
+.active { display: block; opacity: 1; }
+
+.main-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #1a2a3a;
+    text-shadow: 2px 2px 0px #fff;
+}
+.main-header p {
+    font-family: 'Arial', sans-serif;
+    color: #5b728a;
+    font-size: 1.1rem;
+}
+
+/* Premium Card Graphics Grid Setup */
+.card-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.premium-holo-card {
+    background: linear-gradient(145deg, #1d2d44 0%, #0d131a 100%);
+    border: 3px solid #233446;
+    border-radius: 12px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.holo-glare-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(125deg, transparent 35%, rgba(255,255,255,0.2) 45%, rgba(0,255,204,0.15) 50%, transparent 60%);
+    background-size: 200% 200%;
+}
+
+.inner-card-artwork {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,255,204,0.8);
+}
+
+/* Manga Black/Yellow/White Strips */
+.manga-strip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.manga-banner-strip {
+    background-color: #000000;
+    border-top: 12px solid #fff200;
+    border-bottom: 12px solid #fff200;
+    padding: 35px 0;
+    width: 140%;
+    transform: rotate(-4deg);
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.manga-title-text {
+    font-size: 7.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 6px;
+    text-shadow: 6px 6px 0px #fff200, -3px -3px 0px #000;
+}
+
+/* Column Selection Phase Matrix */
+.matrix-columns-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.matrix-column {
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px dashed #9bc3e6;
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.matrix-column:hover {
+    background: #ffffff;
+    border-color: #fff200;
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* High-Grade CSS Vector Anime Chibi Character Frame */
+.anime-chibi-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.chibi-brand-tag {
+    background: #000;
+    color: #fff200;
+    padding: 4px 16px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.vector-chibi-body {
+    width: 100px;
+    height: 140px;
+    position: relative;
+}
+
+.chibi-head {
+    width: 70px;
+    height: 65px;
+    background: #ffe3d1;
+    border-radius: 40px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    z-index: 3;
+    border: 2px solid #233446;
+}
+
+.chibi-eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 44px;
+    margin: 22px auto 0 auto;
+}
+
+.eye {
+    width: 12px;
+    height: 16px;
+    background: #233446;
+    border-radius: 50%;
+}
+
+.chibi-blush {
+    width: 54px;
+    height: 6px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px auto;
+}
+
+.chibi-blush::before, .chibi-blush::after {
+    content: '';
+    width: 10px;
+    height: 6px;
+    background: #ff9ebb;
+    border-radius: 50%;
+}
+
+.chibi-hair-back {
+    width: 82px;
+    height: 80px;
+    background: #463931;
+    border-radius: 40px;
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    z-index: 1;
+}
+
+.chibi-hoodie {
+    width: 60px;
+    height: 55px;
+    background: #5c7599;
+    border-radius: 20px 20px 10px 10px;
+    position: absolute;
+    left: 20px;
+    top: 76px;
+    z-index: 2;
+    border: 2px solid #233446;
+}
+
+.chibi-hand-wand {
+    font-size: 2.8rem;
+    position: absolute;
+    right: -10px;
+    top: 60px;
+    z-index: 5;
+    transform-origin: bottom center;
+}
+
+.wand-cast-loop {
+    animation: animeWandSwing 0.4s ease infinite alternate;
+}
+
+@keyframes animeWandSwing {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(-35deg) scale(1.1); }
+}
+
+.chibi-chat-bubble {
+    position: absolute;
+    background: #fff200;
+    border: 4px solid #000;
+    font-size: 2rem;
+    padding: 12px 24px;
+    border-radius: 16px;
+    top: 20%;
+    left: 58%;
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* Controls & Status Systems */
+.control-panel { text-align: center; margin-top: 30px; }
+.manga-btn {
+    background: #fff200;
+    border: 4px solid #000;
+    color: #000;
+    font-size: 1.8rem;
+    padding: 15px 60px;
+    cursor: pointer;
+    box-shadow: 6px 6px 0px #000;
+    transition: transform 0.1s;
+}
+.manga-btn:active { transform: translate(3px, 3px); box-shadow: 3px 3px 0px #000; }
+.manga-btn.finish { background: #ff3b3b; color: white; }
+
+.ritual-chamber {
+    text-align: center;
+    padding: 100px 0;
+}
+.loading-ring {
+    width: 80px; height: 80px;
+    border: 8px solid #cbdff2;
+    border-top: 8px solid #1a2a3a;
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+    animation: loopSpin 1s linear infinite;
+}
+@keyframes loopSpin { 100% { transform: rotate(360deg); } }
+.ritual-status { font-size: 2rem; margin-bottom: 10px; }
+.timer-log { font-family: sans-serif; color: #5b728a; }
+.center-reveal-box { width: 220px; margin: 0 auto; }
+  
